@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dct="http://purl.org/dc/terms/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+>
+  <rdf:Description rdf:about="http://purl.org/legal_form/vocab">
+    <dct:creator>Thomas Hoppe</dct:creator>
+    <rdfs:label xml:lang="de">Rechtsformvokabular</rdfs:label>
+    <rdfs:comment xml:lang="de">Ein Vokabular um Rechtsformen zu beschreiben.</rdfs:comment>
+    <dct:subject xml:lang="en">http://en.wikipedia.org/wiki/Types_of_business_entity</dct:subject>
+    <rdfs:label xml:lang="en">Legal Form Vocabulary</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dct:issued>2014-03-18</dct:issued>
+    <dct:description xml:lang="de">Ein Vokabular um Rechtsformen zu beschreiben, unter welchen Einzelpersonen oder Organisationen wirtschaftliche, wohltätige oder in sonstiger Weise vorteilhafte Aktivitäten durchführen können.</dct:description>
+    <vann:preferredNamespaceUri>https://w3id.org/legal_form#</vann:preferredNamespaceUri>
+    <dct:description xml:lang="en">A voabulary which allows to describe legal forms under which individuals or organizations carry on some kind of economic, charitable or in other ways beneficial activity.</dct:description>
+    <dct:rights>Copyright © 2014 n-fuse GmbH</dct:rights>
+    <owl:versionInfo>0.6</owl:versionInfo>
+    <vann:preferredNamespacePrefix>lfov</vann:preferredNamespacePrefix>
+    <rdfs:comment xml:lang="en">A vocabulary to describe legal forms.</rdfs:comment>
+    <dct:subject xml:lang="de">http://de.wikipedia.org/wiki/Rechtsform</dct:subject>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/legal_form#legislation">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="de">Rechtsraum</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/legal_form#LegalForm"/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:label xml:lang="en">legislation</rdfs:label>
+    <rdfs:definedBy rdf:resource="http://purl.org/legal_form/vocab"/>
+    <rdfs:comment xml:lang="en">Legislation (e. g. a country or a union thereof), in which this legal form is defined.</rdfs:comment>
+    <rdfs:comment xml:lang="de">Rechstraum (z. B. ein Land oder Union davon), in welchem diese Rechtsform definiert ist.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/legal_form#acronym">
+    <rdfs:label xml:lang="en">acronym</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    <rdfs:label xml:lang="de">Akronym</rdfs:label>
+    <rdfs:comment xml:lang="en">The acronym defined by law.</rdfs:comment>
+    <rdfs:comment xml:lang="de">Das gesetzl. definierte Akronym.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="https://w3id.org/legal_form#LegalForm"/>
+    <rdfs:definedBy rdf:resource="http://purl.org/legal_form/vocab"/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/legal_form#name">
+    <rdfs:domain rdf:resource="https://w3id.org/legal_form#LegalForm"/>
+    <rdfs:definedBy rdf:resource="http://purl.org/legal_form/vocab"/>
+    <rdfs:label xml:lang="en">name</rdfs:label>
+    <rdfs:comment xml:lang="en">The name defined by law.</rdfs:comment>
+    <rdfs:comment xml:lang="de">Der gesetzl. definierte Name.</rdfs:comment>
+    <rdfs:label xml:lang="de">Name</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/legal_form#LegalForm">
+    <rdfs:label xml:lang="de">Rechtsform</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label xml:lang="en">legal form</rdfs:label>
+    <rdfs:definedBy rdf:resource="http://purl.org/legal_form/vocab"/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:comment xml:lang="en">A Legal form defined the organizational form and decision making of a legal entity.</rdfs:comment>
+    <rdfs:comment xml:lang="de">Eine Rechtsform beschreibt die Organisationsform und Entscheidungsfindung einer Rechtsperson.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/legal_form#shared">
+    <rdfs:comment xml:lang="de">Definiert, ob das Kapital bzw. das Eigentum selbst in Anteile aufgeteilt ist.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Defines whether the capital or the ownership itself is divided into shares.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label xml:lang="en">shared</rdfs:label>
+    <rdfs:label xml:lang="de">aufgeteilt</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:domain rdf:resource="https://w3id.org/legal_form#LegalForm"/>
+    <rdfs:definedBy rdf:resource="http://purl.org/legal_form/vocab"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/legal_form#limitedLiability">
+    <rdfs:comment xml:lang="en">The owners or members of the legal entity are not personally liable for the company's debts.</rdfs:comment>
+    <rdfs:label xml:lang="en">limited liability</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:label xml:lang="de">beschränkte Haftung</rdfs:label>
+    <rdfs:definedBy rdf:resource="http://purl.org/legal_form/vocab"/>
+    <vs:term_status>stable</vs:term_status>
+    <rdfs:comment xml:lang="de">Die Besitzer oder Mitglieder der rechtlichen Einheit haften nicht persönlich für deren Verbindlichkeiten.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/legal_form#LegalForm"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+</rdf:RDF>

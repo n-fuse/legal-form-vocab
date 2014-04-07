@@ -1,0 +1,93 @@
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dir: <http://dir.w3.org/directory/schema#> .
+@prefix directory: <http://dir.w3.org/directory/orgtypes/> .
+@prefix lfov: <https://w3id.org/legal_form#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+lfov:LegalForm a rdfs:Class,
+        skos:Concept ;
+    rdfs:label "Rechtsform"@de,
+        "legal form"@en ;
+    rdfs:comment "Eine Rechtsform beschreibt die Organisationsform und Entscheidungsfindung einer Rechtsperson."@de,
+        "A Legal form defined the organizational form and decision making of a legal entity."@en ;
+    rdfs:definedBy <http://purl.org/legal_form/vocab> ;
+    vs:term_status "stable" .
+
+lfov:acronym a rdf:Property ;
+    rdfs:label "Akronym"@de,
+        "acronym"@en ;
+    rdfs:comment "Das gesetzl. definierte Akronym."@de,
+        "The acronym defined by law."@en ;
+    rdfs:definedBy <http://purl.org/legal_form/vocab> ;
+    rdfs:domain lfov:LegalForm ;
+    rdfs:range rdf:langString ;
+    rdfs:subPropertyOf skos:altLabel ;
+    vs:term_status "stable" .
+
+lfov:legislation a rdf:Property ;
+    rdfs:label "Rechtsraum"@de,
+        "legislation"@en ;
+    rdfs:comment "Rechstraum (z. B. ein Land oder Union davon), in welchem diese Rechtsform definiert ist."@de,
+        "Legislation (e. g. a country or a union thereof), in which this legal form is defined."@en ;
+    rdfs:definedBy <http://purl.org/legal_form/vocab> ;
+    rdfs:domain lfov:LegalForm ;
+    vs:term_status "stable" .
+
+lfov:limitedLiability a rdf:Property ;
+    rdfs:label "beschränkte Haftung"@de,
+        "limited liability"@en ;
+    rdfs:comment "Die Besitzer oder Mitglieder der rechtlichen Einheit haften nicht persönlich für deren Verbindlichkeiten."@de,
+        "The owners or members of the legal entity are not personally liable for the company's debts."@en ;
+    rdfs:definedBy <http://purl.org/legal_form/vocab> ;
+    rdfs:domain lfov:LegalForm ;
+    rdfs:range xsd:boolean ;
+    vs:term_status "stable" .
+
+lfov:name a rdf:Property ;
+    rdfs:label "Name"@de,
+        "name"@en ;
+    rdfs:comment "Der gesetzl. definierte Name."@de,
+        "The name defined by law."@en ;
+    rdfs:definedBy <http://purl.org/legal_form/vocab> ;
+    rdfs:domain lfov:LegalForm ;
+    rdfs:range rdf:langString ;
+    rdfs:subPropertyOf skos:prefLabel ;
+    vs:term_status "stable" .
+
+lfov:shared a rdf:Property ;
+    rdfs:label "aufgeteilt"@de,
+        "shared"@en ;
+    rdfs:comment "Definiert, ob das Kapital bzw. das Eigentum selbst in Anteile aufgeteilt ist."@de,
+        "Defines whether the capital or the ownership itself is divided into shares."@en ;
+    rdfs:definedBy <http://purl.org/legal_form/vocab> ;
+    rdfs:domain lfov:LegalForm ;
+    rdfs:range xsd:boolean ;
+    vs:term_status "stable" .
+
+<http://purl.org/legal_form/vocab> a owl:Ontology ;
+    rdfs:label "Rechtsformvokabular"@de,
+        "Legal Form Vocabulary"@en ;
+    cc:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:creator "Thomas Hoppe" ;
+    dct:description "Ein Vokabular um Rechtsformen zu beschreiben, unter welchen Einzelpersonen oder Organisationen wirtschaftliche, wohltätige oder in sonstiger Weise vorteilhafte Aktivitäten durchführen können."@de,
+        "A voabulary which allows to describe legal forms under which individuals or organizations carry on some kind of economic, charitable or in other ways beneficial activity."@en ;
+    dct:issued "2014-03-18" ;
+    dct:rights "Copyright © 2014 n-fuse GmbH" ;
+    dct:subject "http://de.wikipedia.org/wiki/Rechtsform"@de,
+        "http://en.wikipedia.org/wiki/Types_of_business_entity"@en ;
+    vann:preferredNamespacePrefix "lfov" ;
+    vann:preferredNamespaceUri "https://w3id.org/legal_form#" ;
+    rdfs:comment "Ein Vokabular um Rechtsformen zu beschreiben."@de,
+        "A vocabulary to describe legal forms."@en ;
+    owl:versionInfo "0.6" .
+

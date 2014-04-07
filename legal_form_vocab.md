@@ -1,20 +1,31 @@
 # Introduction
 
-The **Legal Form Vocabulary** allows to describe legal forms such as the
+The **Legal Form Vocabulary** vocabulary defined in
+[RDFS](http://en.wikipedia.org/wiki/RDF_Schema)
+allows to describe legal forms under which individuals or organizations
+carry on some kind of economic, charitable or in other ways beneficial
+activity.
+This includes but is not limited to forms of the private law such as the
 [European SE](http://en.wikipedia.org/wiki/European_Company_Regulation)
 or the
-[German GmbH](http://en.wikipedia.org/wiki/Gesellschaft_mit_beschr%C3%A4nkter_Haftung)
-whose status can be attained by a formal registration within a legislation and
-make the registree a legal entity.
+[German GmbH](http://en.wikipedia.org/wiki/Gesellschaft_mit_beschr%C3%A4nkter_Haftung);
+But also cooperatives, associations or forms of the public law.
+The status of a legal form is usually gained by some formal registration
+within a jurisdiction but this is not always the case.
+
+The vocabulary is available in the following serializations:
+
+- [JSON-LD](legal_form_vocab.jsonld) (source)
+- [RDF/XM](legal_form_vocab.rdf)
+- [Turtle](legal_form_vocab.ttl)
 
 # Status of this Document
 
 This vocabulary has been developed by
-[n-fuse GmbH](http://www.n-fuse.de).
+[n-fuse GmbH](http://www.n-fuse.de) and is intended for public use.
 
-The vocabulary defined in this document is also available as RDF serialization
-in these formats: [`RDF/XML`](legal_form_vocab.rdf) and
-[`Turtle`](legal_form_vocab.ttl).
+We consider the overall status experimental but it may already be used
+productively.
 
 **How to contribute**
 
@@ -34,7 +45,7 @@ in these formats: [`RDF/XML`](legal_form_vocab.rdf) and
 _This section is non-normative._
 
 The namespace of the Legal Form vocabulary is
-`https://github.com/n-fuse/legal-form-vocab#` and the preferred prefix is `lfov`.
+`https://w3id.org/legal_form#` and the preferred prefix is `lfov`.
 
 A full set of namespaces and prefixes used in this document is shown in the
 table below.
@@ -71,12 +82,10 @@ table below.
 
 _This section is non-normative._
 
-The key class is `lfov:LegalForm` which represents a legal form whose status
-can be attained by a formal registration process. The result of a successful
-registration process is a legal entity taking such a legal form.
-The properties of a legal form are defined by the legislative authorities
+The key class is `lfov:LegalForm` which represents a legal form.
+The exact properties of a legal form are defined by the legislative authorities
 within its corresponding jurisdiction.
-The vocabulary defines properties to formally describe
+This vocabulary defines properties to formally describe
 general aspects of a legal form – e.&nbsp;g. whether it is a commercial
 or non-commercial one.
 
@@ -108,7 +117,7 @@ and the `skos:Concept` from the
         [lfov:acronym](acronym)
       </li>
       <li>
-        [lfov:registrableIn](registrableIn)
+        [lfov:legislation](legislation)
       </li>
     </ul>
   </dd>
@@ -119,15 +128,26 @@ and the `skos:Concept` from the
 _This section is non-normative._
 
 The following is an example of a (real) legal form described using
-the Legal Form vocabulary (in RDF/Turtle):
+the Legal Form vocabulary (in JSON-LD):
 
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id": "indivbiz",
+      "name": {
+        "de": "Einzelunternehmen",
+        "en-US": "Sole Proprietorship",
+        "en-GB": "Sole Trader"
+      },
+      "legislation": "http://sws.geonames.org/2921044/",
+      "limitedLiability": false
+    }
 
 
 # Relationship with the Registered Organization Vocabulary
 
 _This section is non-normative._
 
-Individuals of the class `lfov:LegalForm` are intended to be values of
+Individuals of the class `lfov:LegalForm` are intended to be objects of
 the `rov:orgType` property. Therefore, it is typed as `rdfs:Class`
 and `skos:Concept`.
 
@@ -156,20 +176,161 @@ The classes and properties are described in the following sub-sections.
   </tbody>
 </table>
 
-The Legal Form class is central to the vocabulary. It represents a legal form
-whose status can be attained by a formal registration within a legislation and
-make the registree a legal entity. Such legal forms may range from
-a sole trader (which must be registered in some jurisdictions) or a publicly
-traded company.
+The Legal Form class is central to the vocabulary; It represents a legal form.
 
 ## Properties
 
+### name
 
-### TEST
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Domain</th>
+      <th>Range</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code>
+          lfov:name<br>
+          rdfs:subPropertyOf<br>
+          skos:prefLabel
+        </code>
+      </td>
+      <td>
+        <code>lfov:LegalForm</code>
+      </td>
+      <td>
+        <code>rdf:langString</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-sdfsdf
+The name defined by law.
 
-    "gn": "http://www.geonames.org/ontology#",
+### acronym
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Domain</th>
+      <th>Range</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code>
+          lfov:acronym<br>
+          rdfs:subPropertyOf<br>
+          skos:altLabel
+        </code>
+      </td>
+      <td>
+        <code>lfov:LegalForm</code>
+      </td>
+      <td>
+        <code>rdf:langString</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+The acronym defined by law.
+
+### legislation
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Domain</th>
+      <th>Range</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code>
+          lfov:legislation
+        </code>
+      </td>
+      <td>
+        <code>lfov:LegalForm</code>
+      </td>
+      <td>
+        <code></code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+Legislation (e. g. a country or a union thereof), in which this legal
+form is defined.
+
+### limitedLiability
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Domain</th>
+      <th>Range</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code>
+          lfov:limitedLiability
+        </code>
+      </td>
+      <td>
+        <code>lfov:LegalForm</code>
+      </td>
+      <td>
+        <code>xsd:boolean</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+The owners or members of the legal entity are not personally liable for
+the company's debts.
+
+### shared
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Domain</th>
+      <th>Range</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code>
+          lfov:shared
+        </code>
+      </td>
+      <td>
+        <code>lfov:LegalForm</code>
+      </td>
+      <td>
+        <code>xsd:boolean</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+Defines whether the capital or the ownership itself is divided into shares.
+
 
 # Conformance
 

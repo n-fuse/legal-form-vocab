@@ -1,0 +1,267 @@
+{
+  "@context": {
+    "lfov": "https://w3id.org/legal_form#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "vs": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
+    "vann": "http://purl.org/vocab/vann/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dct": "http://purl.org/dc/terms/",
+    "cc": "http://creativecommons.org/ns#",
+    "org": "http://www.w3.org/ns/org#",
+    "dir": "http://dir.w3.org/directory/schema#",
+    "directory": "http://dir.w3.org/directory/orgtypes/",
+    "defines": {
+      "@reverse": "rdfs:definedBy"
+    },
+    "label": "rdfs:label",
+    "title": "dct:title",
+    "comment": "rdfs:comment",
+    "description": "dct:description",
+    "subject": { "@id": "dct:subject", "@type": "@id" },
+    "creator": "dct:creator",
+    "contributor": "dct:contributor",
+    "issued": "dct:issued",
+    "modified": "dct:modified",
+    "versionInfo": "owl:versionInfo",
+    "rights": "dct:rights",
+    "license": { "@id": "cc:license", "@type": "@id" },
+    "domain": { "@id": "rdfs:domain", "@type": "@id" },
+    "range": {"@id": "rdfs:range", "@type": "@id" },
+    "subClassOf": { "@id": "rdfs:subClassOf", "@type": "@id" },
+    "subPropertyOf": { "@id": "rdfs:subPropertyOf", "@type": "@id" },
+    "status": "vs:term_status",
+    "preferredNamespacePrefix": "vann:preferredNamespacePrefix",
+    "preferredNamespaceUri": "vann:preferredNamespaceUri"
+  },
+  "@id": "http://purl.org/legal_form/vocab",
+  "@type": "owl:Ontology",
+  "label":
+    [
+      {
+        "@value": "Legal Form Vocabulary",
+        "@language": "en"
+      },
+      {
+        "@value": "Rechtsformvokabular",
+        "@language": "de"
+      }
+    ],
+  "comment":
+    [
+      {
+        "@value": "A vocabulary to describe legal forms.",
+        "@language": "en"
+      },
+      {
+        "@value": "Ein Vokabular um Rechtsformen zu beschreiben.",
+        "@language": "de"
+      }
+    ],
+  "description":
+    [
+      {
+        "@value": "A voabulary which allows to describe legal forms under which individuals or organizations carry on some kind of economic, charitable or in other ways beneficial activity.",
+        "@language": "en"
+      },
+      {
+        "@value": "Ein Vokabular um Rechtsformen zu beschreiben, unter welchen Einzelpersonen oder Organisationen wirtschaftliche, wohltätige oder in sonstiger Weise vorteilhafte Aktivitäten durchführen können.",
+        "@language": "de"
+      }
+    ],
+  "subject":
+    [
+      {
+        "@value": "http://en.wikipedia.org/wiki/Types_of_business_entity",
+        "@language": "en"
+      },
+      {
+        "@value": "http://de.wikipedia.org/wiki/Rechtsform",
+        "@language": "de"
+      }
+    ],
+  "creator": "Thomas Hoppe",
+  "issued": "2014-03-18",
+  "versionInfo": "0.6",
+  "rights": "Copyright © 2014 n-fuse GmbH",
+  "license": "http://creativecommons.org/licenses/by/4.0/",
+  "preferredNamespacePrefix": "lfov",
+  "preferredNamespaceUri": "https://w3id.org/legal_form#",
+  "defines": [
+    {
+      "@id": "lfov:LegalForm",
+      "@type": [ "rdfs:Class", "skos:Concept" ],
+      "label":
+        [
+          {
+            "@value": "legal form",
+            "@language": "en"
+          },
+          {
+            "@value": "Rechtsform",
+            "@language": "de"
+          }
+        ],
+      "comment":
+        [
+          {
+            "@value": "A Legal form defined the organizational form and decision making of a legal entity.",
+            "@language": "en"
+          },
+          {
+            "@value": "Eine Rechtsform beschreibt die Organisationsform und Entscheidungsfindung einer Rechtsperson.",
+            "@language": "de"
+          }
+        ],
+      "status": "stable"
+    },
+    {
+      "@id": "lfov:name",
+      "@type": "rdf:Property",
+      "label":
+        [
+          {
+            "@value": "name",
+            "@language": "en"
+          },
+          {
+            "@value": "Name",
+            "@language": "de"
+          }
+        ],
+      "comment":
+        [
+          {
+            "@value": "The name defined by law.",
+            "@language": "en"
+          },
+          {
+            "@value": "Der gesetzl. definierte Name.",
+            "@language": "de"
+          }
+        ],
+      "domain": "lfov:LegalForm",
+      "range": "rdf:langString",
+      "subPropertyOf": "skos:prefLabel",
+      "status": "stable"
+    },
+    {
+      "@id": "lfov:acronym",
+      "@type": "rdf:Property",
+      "label":
+        [
+          {
+            "@value": "acronym",
+            "@language": "en"
+          },
+          {
+            "@value": "Akronym",
+            "@language": "de"
+          }
+        ],
+      "comment":
+        [
+          {
+            "@value": "The acronym defined by law.",
+            "@language": "en"
+          },
+          {
+            "@value": "Das gesetzl. definierte Akronym.",
+            "@language": "de"
+          }
+        ],
+      "domain": "lfov:LegalForm",
+      "range": "rdf:langString",
+      "subPropertyOf": "skos:altLabel",
+      "status": "stable"
+    },
+    {
+      "@id": "lfov:legislation",
+      "@type": "rdf:Property",
+      "label":
+        [
+          {
+            "@value": "legislation",
+            "@language": "en"
+          },
+          {
+            "@value": "Rechtsraum",
+            "@language": "de"
+          }
+        ],
+      "comment":
+        [
+          {
+            "@value": "Legislation (e. g. a country or a union thereof), in which this legal form is defined.",
+            "@language": "en"
+          },
+          {
+            "@value": "Rechstraum (z. B. ein Land oder Union davon), in welchem diese Rechtsform definiert ist.",
+            "@language": "de"
+          }
+        ],
+      "domain": "lfov:LegalForm",
+      "status": "stable"
+    },
+    {
+      "@id": "lfov:limitedLiability",
+      "@type": "rdf:Property",
+      "label":
+        [
+          {
+            "@value": "limited liability",
+            "@language": "en"
+          },
+          {
+            "@value": "beschränkte Haftung",
+            "@language": "de"
+          }
+        ],
+      "comment":
+        [
+          {
+            "@value": "The owners or members of the legal entity are not personally liable for the company's debts.",
+            "@language": "en"
+          },
+          {
+            "@value": "Die Besitzer oder Mitglieder der rechtlichen Einheit haften nicht persönlich für deren Verbindlichkeiten.",
+            "@language": "de"
+          }
+        ],
+      "domain": "lfov:LegalForm",
+      "range": "xsd:boolean",
+      "status": "stable"
+    },
+    {
+      "@id": "lfov:shared",
+      "@type": "rdf:Property",
+      "label":
+        [
+          {
+            "@value": "shared",
+            "@language": "en"
+          },
+          {
+            "@value": "aufgeteilt",
+            "@language": "de"
+          }
+        ],
+      "comment":
+        [
+          {
+            "@value": "Defines whether the capital or the ownership itself is divided into shares.",
+            "@language": "en"
+          },
+          {
+            "@value": "Definiert, ob das Kapital bzw. das Eigentum selbst in Anteile aufgeteilt ist.",
+            "@language": "de"
+          }
+        ],
+      "domain": "lfov:LegalForm",
+      "range": "xsd:boolean",
+      "status": "stable"
+    }
+  ]
+}

@@ -1,0 +1,537 @@
+{
+  "@context" : {
+    "lfov": "https://w3id.org/legal_form#",
+    "acronym": "lfov:acronym",
+    "name": { "@id": "lfov:name", "@container": "@language" },
+    "legislation": { "@id" : "lfov:legislation", "@type" : "@id" },
+    "limitedLiability": "lfov:limitedLiability",
+    "shared": "lfov:shared"
+  },
+  "@graph":
+  [
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id": "se",
+      "acronym": "SE",
+      "name": {
+        "la": "Societas Europaea",
+        "de": "Europäische Gesellschaft",
+        "en": "European Society"
+      },
+      "legislation": [
+        "http://sws.geonames.org/2921044/",
+        "http://sws.geonames.org/2963597/",
+        "http://sws.geonames.org/2635167/",
+        "http://sws.geonames.org/2264397/",
+        "http://sws.geonames.org/2510769/",
+        "http://sws.geonames.org/3017382/",
+        "http://sws.geonames.org/2802361/",
+        "http://sws.geonames.org/2750405/",
+        "http://sws.geonames.org/2623032/",
+        "http://sws.geonames.org/3175395/",
+        "http://sws.geonames.org/2562770/",
+        "http://sws.geonames.org/2661886/",
+        "http://sws.geonames.org/660013/",
+        "http://sws.geonames.org/453733/",
+        "http://sws.geonames.org/458258/",
+        "http://sws.geonames.org/597427/",
+        "http://sws.geonames.org/798544/",
+        "http://sws.geonames.org/3077311/",
+        "http://sws.geonames.org/2782113/",
+        "http://sws.geonames.org/3190538/",
+        "http://sws.geonames.org/3202326/",
+        "http://sws.geonames.org/3057568/",
+        "http://sws.geonames.org/719819/",
+        "http://sws.geonames.org/798549/",
+        "http://sws.geonames.org/732800/",
+        "http://sws.geonames.org/390903/",
+        "http://sws.geonames.org/146669/"
+      ],
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id": "sce",
+      "acronym": "SCE",
+      "name": {
+        "la": "Societas Cooperativa Europaea",
+        "de": "Europäische Genossenschaft",
+        "en": "European Cooperative Society"
+      },
+      "legislation": [
+        "http://sws.geonames.org/2921044/",
+        "http://sws.geonames.org/2963597/",
+        "http://sws.geonames.org/2635167/",
+        "http://sws.geonames.org/2264397/",
+        "http://sws.geonames.org/2510769/",
+        "http://sws.geonames.org/3017382/",
+        "http://sws.geonames.org/2802361/",
+        "http://sws.geonames.org/2750405/",
+        "http://sws.geonames.org/2623032/",
+        "http://sws.geonames.org/3175395/",
+        "http://sws.geonames.org/2562770/",
+        "http://sws.geonames.org/2661886/",
+        "http://sws.geonames.org/660013/",
+        "http://sws.geonames.org/453733/",
+        "http://sws.geonames.org/458258/",
+        "http://sws.geonames.org/597427/",
+        "http://sws.geonames.org/798544/",
+        "http://sws.geonames.org/3077311/",
+        "http://sws.geonames.org/2782113/",
+        "http://sws.geonames.org/3190538/",
+        "http://sws.geonames.org/3202326/",
+        "http://sws.geonames.org/3057568/",
+        "http://sws.geonames.org/719819/",
+        "http://sws.geonames.org/798549/",
+        "http://sws.geonames.org/732800/",
+        "http://sws.geonames.org/390903/",
+        "http://sws.geonames.org/146669/"
+      ],
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id": "indivbiz",
+      "name": {
+        "de": "Einzelunternehmen",
+        "en-US": "Sole Proprietorship",
+        "en-GB": "Sole Trader"
+      },
+      "legislation": "http://sws.geonames.org/2921044/",
+      "limitedLiability": false
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id": "indivbiz1",
+      "name": {
+        "de": "Einzelunternehmen",
+        "en-US": "Sole Proprietorship",
+        "en-GB": "Sole Trader"
+      },
+      "legislation": "http://sws.geonames.org/2782113/",
+      "limitedLiability": false
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id": "indivbiz2",
+      "acronym": "",
+      "name": {
+        "de": "Einzelunternehmen",
+        "en-US": "Sole Proprietorship",
+        "en-GB": "Sole Trader"
+      },
+      "legislation": "http://sws.geonames.org/2658434/",
+      "limitedLiability": false
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "gmbh",
+      "acronym": "GmbH",
+      "name": {
+        "de": "Gesellschaft mit beschränkter Haftung"
+      },
+      "legislation": "http://sws.geonames.org/2921044/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "gmbh1",
+      "acronym": "GmbH",
+      "name": {
+        "de": "Gesellschaft mit beschränkter Haftung"
+      },
+      "legislation": "http://sws.geonames.org/2782113/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "gmbh2",
+      "acronym": "GmbH",
+      "name": {
+        "de": "Gesellschaft mit beschränkter Haftung"
+      },
+      "legislation": "http://sws.geonames.org/2658434/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id": "gmbh_und_co_kg",
+      "acronym": "GmbH & Co. KG",
+      "name": {
+        "de": "Gesellschaft mit beschränkter Haftung & Compagnie Kommanditgesellschaft"
+      },
+      "legislation": "http://sws.geonames.org/2921044/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id": "ughb",
+      "acronym": "UG",
+      "name": {
+        "de": "UG Haftungsbeschränkt"
+      },
+      "legislation": "http://sws.geonames.org/2921044/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id": "ohg",
+      "acronym": "OHG",
+      "name": {
+        "de": "Offene Handelsgesellschaft"
+      },
+      "legislation": "http://sws.geonames.org/2921044/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id": "ohg1",
+      "acronym": "OHG",
+      "name": {
+        "de": "Offene Handelsgesellschaft"
+      },
+      "legislation": "http://sws.geonames.org/2782113/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "kg",
+      "acronym": "KG",
+      "name": {
+        "de": "Kommanditgesellschaft"
+      },
+      "legislation": "http://sws.geonames.org/2921044/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "kg1",
+      "acronym": "KG",
+      "name": {
+        "de": "Kommanditgesellschaft"
+      },
+      "legislation": "http://sws.geonames.org/2782113/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "kg2",
+      "acronym": "KG",
+      "name": {
+        "de": "Kommanditgesellschaft"
+      },
+      "legislation": "http://sws.geonames.org/2658434/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "ag",
+      "acronym": "AG",
+      "name": {
+        "de": "Aktiengesellschaft"
+      },
+      "legislation": "http://sws.geonames.org/2921044/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "ag1",
+      "acronym": "AG",
+      "name": {
+        "de": "Aktiengesellschaft"
+      },
+      "legislation": "http://sws.geonames.org/2782113/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "ag2",
+      "acronym": "AG",
+      "name": {
+        "de": "Aktiengesellschaft"
+      },
+      "legislation": "http://sws.geonames.org/2658434/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "ek",
+      "acronym": "e. K.",
+      "name": {
+        "de": "Eingetragener Kaufmann"
+      },
+      "legislation": "http://sws.geonames.org/2921044/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "ev",
+      "acronym": "e. V.",
+      "name": {
+        "de": "Eingetragener Verein"
+      },
+      "legislation": "http://sws.geonames.org/2921044/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "ltd",
+      "acronym": "Ltd.",
+      "name": {
+        "de": "Limited"
+      },
+      "legislation": "http://sws.geonames.org/2635167/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "sa",
+      "acronym": "S.A.",
+      "legislation": "http://sws.geonames.org/3017382/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "sa1",
+      "acronym": "S.A.",
+      "legislation": "http://sws.geonames.org/2802361/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "sa2",
+      "acronym": "S.A.",
+      "legislation": "http://sws.geonames.org/2960313/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "plc",
+      "acronym": "plc",
+      "legislation": "http://sws.geonames.org/2635167/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "plc1",
+      "acronym": "plc",
+      "legislation": "http://sws.geonames.org/2963597/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "srl",
+      "acronym": "SRL",
+      "legislation": "http://sws.geonames.org/3175395/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "srl1",
+      "acronym": "SRL",
+      "legislation": "http://sws.geonames.org/798549/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "srl2",
+      "acronym": "SRL",
+      "legislation": "http://sws.geonames.org/2510769/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "bvba",
+      "acronym": "B.V.B.A.",
+      "legislation": "http://sws.geonames.org/2802361/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "aps",
+      "acronym": "ApS",
+      "legislation": "http://sws.geonames.org/2623032/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "lda",
+      "acronym": "Lda.",
+      "legislation": "http://sws.geonames.org/2264397/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "oy",
+      "acronym": "Oy",
+      "legislation": "http://sws.geonames.org/660013/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "bv",
+      "acronym": "BV",
+      "legislation": "http://sws.geonames.org/2750405/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "nv",
+      "acronym": "NV",
+      "legislation": "http://sws.geonames.org/2750405/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "ab",
+      "acronym": "AB",
+      "legislation": "http://sws.geonames.org/597427/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "as",
+      "acronym": "A/S",
+      "legislation": "http://sws.geonames.org/2623032/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "is",
+      "acronym": "I/S",
+      "legislation": "http://sws.geonames.org/2623032/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "ks",
+      "acronym": "K/S",
+      "legislation": "http://sws.geonames.org/2623032/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "snc",
+      "acronym": "SNC",
+      "legislation": "http://sws.geonames.org/3017382/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "snc1",
+      "acronym": "SNC",
+      "legislation": "http://sws.geonames.org/2802361/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "snc2",
+      "acronym": "SNC",
+      "legislation": "http://sws.geonames.org/2960313/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "sarl",
+      "acronym": "SARL",
+      "legislation": "http://sws.geonames.org/3017382/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "sarl1",
+      "acronym": "SARL",
+      "legislation": "http://sws.geonames.org/2960313/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "spj",
+      "acronym": "Sp.j.",
+      "legislation": "http://sws.geonames.org/798544/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "spk",
+      "acronym": "Sp.k.",
+      "legislation": "http://sws.geonames.org/798544/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "spzoo",
+      "acronym": "Sp. z o. o.",
+      "legislation": "http://sws.geonames.org/798544/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "sro",
+      "acronym": "s.r.o",
+      "legislation": "http://sws.geonames.org/3077311/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "sro1",
+      "acronym": "s.r.o",
+      "legislation": "http://sws.geonames.org/3057568/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "as",
+      "acronym": "a.s.",
+      "legislation": "http://sws.geonames.org/3077311/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "as1",
+      "acronym": "a.s.",
+      "legislation": "http://sws.geonames.org/3057568/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "hb",
+      "acronym": "HB",
+      "name": {
+        "se": "handelsbolag"
+      },
+      "legislation": "http://sws.geonames.org/2661886/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "kb",
+      "acronym": "KB",
+      "name": {
+        "se": "kommanditbolag"
+      },
+      "legislation": "http://sws.geonames.org/2661886/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "ab1",
+      "acronym": "AB",
+      "name": {
+        "se": "publika aktiebolag"
+      },
+      "legislation": "http://sws.geonames.org/2661886/",
+      "limitedLiability": true
+    },
+    {
+      "@type": "https://w3id.org/legal_form#LegalForm",
+      "@id" : "ab2",
+      "acronym": "AB",
+      "name": {
+        "se": "privata aktiebolag"
+      },
+      "legislation": "http://sws.geonames.org/2661886/",
+      "limitedLiability": true
+    }
+  ]
+}
