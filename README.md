@@ -25,7 +25,9 @@ to learn more.**
 
 # Data Set
 
-http://en.wikipedia.org/wiki/Types_of_business_entity#Germany
+A data set containing the most
+important European legal forms is available under
+[legal_form-instances.jsonld](legal_form-instances.jsonld).
 
 # License
 
