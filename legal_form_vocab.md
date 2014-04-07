@@ -102,7 +102,7 @@ and the `skos:Concept` from the
   <dd>
     <ul>
       <li>
-        [lfov:LegalForm](LegalForm)
+        [lfov:LegalForm](#the-legal-form-class)
       </li>
     </ul>
   </dd>
@@ -111,19 +111,19 @@ and the `skos:Concept` from the
   <dd>
     <ul>
       <li>
-        [lfov:name](name)
+        [lfov:name](#name)
       </li>
       <li>
-        [lfov:acronym](acronym)
+        [lfov:acronym](#acronym)
       </li>
       <li>
-        [lfov:legislation](legislation)
+        [lfov:legislation](#legislation)
       </li>
       <li>
-        [lfov:limitedLiability](limitedLiability)
+        [lfov:limitedLiability](#limitedLiability)
       </li>
       <li>
-        [lfov:shared](shared)
+        [lfov:shared](#shared)
       </li>
     </ul>
   </dd>
@@ -163,8 +163,6 @@ The classes and properties are described in the following sub-sections.
 
 ## The Legal Form Class
 
-[lfov:LegalForm]: #LegalFormClass
-
 <table>
   <thead>
     <tr>
@@ -189,8 +187,6 @@ The Legal Form class is central to the vocabulary; It represents a legal form.
 ## Properties
 
 ### name
-
-[lfov:name]: #nameProp
 
 <table>
   <thead>
@@ -223,8 +219,6 @@ The name defined by law.
 
 ### acronym
 
-[lfov:acronym]: #acronymProp
-
 <table>
   <thead>
     <tr>
@@ -256,8 +250,6 @@ The acronym defined by law.
 
 ### legislation
 
-[lfov:legislation]: #legislationProp
-
 <table>
   <thead>
     <tr>
@@ -288,8 +280,6 @@ form is defined.
 
 ### limitedLiability
 
-[lfov:limitedLiability]: #limitedLiabilityProp
-
 <table>
   <thead>
     <tr>
@@ -319,8 +309,6 @@ The owners or members of the legal entity are not personally liable for
 the company's debts.
 
 ### shared
-
-[lfov:shared]: #sharedProp
 
 <table>
   <thead>
