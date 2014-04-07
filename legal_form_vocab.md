@@ -33,7 +33,7 @@ productively.
 * Map other ontologies to LFOV
 * [Comment](https://github.com/n-fuse/legal-form-vocab/issues) on the
   specification
-* [Change](https://github.com/n-fuse/legal-form-vocab/master/legal_form_vocab.md)
+* [Change](https://github.com/n-fuse/legal-form-vocab/)
   the current draft
 
 **Revision history**
