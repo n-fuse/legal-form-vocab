@@ -20,7 +20,7 @@ The vocabulary is available in the following serializations:
 - [Turtle](legal_form_vocab.ttl)
 
 **Browse the
-[documentation](https://w3id.org/legal_form/)
+[documentation](https://w3id.org/legal_form)
 to learn more.**
 
 # Data Set

@@ -133,21 +133,23 @@ and the `skos:Concept` from the
 
 _This section is non-normative._
 
-The following is an example of a (real) legal form described using
-the Legal Form vocabulary (in JSON-LD):
+The following is an example of a legal form defin in Germany which is
+described using the Legal Form vocabulary (in JSON-LD):
 
-    {
-      "@type": "https://w3id.org/legal_form#LegalForm",
-      "@id": "indivbiz",
-      "name": {
-        "de": "Einzelunternehmen",
-        "en-US": "Sole Proprietorship",
-        "en-GB": "Sole Trader"
-      },
-      "legislation": "http://sws.geonames.org/2921044/",
-      "limitedLiability": false
-    }
+    <http://legalforms.org/indivbiz> a <https://w3id.org/legal_form#LegalForm> ;
+    lfov:name "Einzelunternehmen"@de,
+              "Sole Trader"@en-GB,
+              "Sole Proprietorship"@en-US ;
+    <legislation> "http://sws.geonames.org/2921044/" ;
+    <limitedLiability> false .
 
+Use of an instance of a legal form
+
+    <http://business.data.gov.uk/id/company/04285910>
+      a rov:RegisteredOrganization ;
+      rov:legalName "Apple Binding Ltd" ;
+      rov:orgStatus <http://example.com/ref/status/NormalActivity> ;
+      rov:orgType <http://legalforms.org/indivbiz> ;
 
 # Relationship with the Registered Organization Vocabulary
 

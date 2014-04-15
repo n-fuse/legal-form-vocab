@@ -33,7 +33,7 @@
 <header>
 <h1 class="title">Legal Form Vocabulary (LFOV)</h1>
 <h3 class="author">Thomas Hoppe (thomas.hoppe@n-fuse.de)</h3>
-<h4 class="date">2014-04-07 (version rev7-dirty)</h4>
+<h4 class="date">2014-04-07 (version rev11-dirty)</h4>
 </header>
 
 <h1>Table of Contents</h1>
@@ -79,10 +79,12 @@
 <li>Express legal forms in the terms of LFOV</li>
 <li>Map other ontologies to LFOV</li>
 <li><a href="https://github.com/n-fuse/legal-form-vocab/issues">Comment</a> on the specification</li>
-<li><a href="https://github.com/n-fuse/legal-form-vocab/master/legal_form_vocab.md">Change</a> the current draft</li>
+<li><a href="https://github.com/n-fuse/legal-form-vocab/">Change</a> the current draft</li>
 </ul>
 <p><strong>Revision history</strong></p>
 <ul>
+<li><a href="legal_form_vocab-1cc623f.html"><code>2014-04-07 10:00:30 +0200</code></a>: <a href="https://github.com/n-fuse/legal-form-vocab.gitcommit/1cc623f854fcfcfb6e7da0aa73a7ec8ac89ac87d">first draft</a></li>
+<li><a href="legal_form_vocab-2075a82.html"><code>2014-04-07 09:54:37 +0200</code></a>: <a href="https://github.com/n-fuse/legal-form-vocab.gitcommit/2075a8243df69843d5b0153fcce8470570b9f710">first draft</a></li>
 <li><a href="legal_form_vocab-31bacab.html"><code>2014-04-07 09:32:54 +0200</code></a>: <a href="https://github.com/n-fuse/legal-form-vocab.gitcommit/31bacab29f9e85d2bad57a610b7cdf1aca597387">first draft</a></li>
 <li><a href="legal_form_vocab-b1673d6.html"><code>2014-04-07 08:23:31 +0200</code></a>: <a href="https://github.com/n-fuse/legal-form-vocab.gitcommit/b1673d6809b7f0e6100cda7755bf3bbacc014fab">first draft</a></li>
 <li><a href="legal_form_vocab-a787416.html"><code>2014-04-02 23:02:41 +0200</code></a>: <a href="https://github.com/n-fuse/legal-form-vocab.gitcommit/a787416bb3985c070b9969f7eb4a37c8f75fc2fe">a good starting point</a></li>
@@ -196,18 +198,19 @@ Properties:
 <section id="example" class="level1">
 <h1><a href="#example"><span class="header-section-number">5</span> Example</a></h1>
 <p><em>This section is non-normative.</em></p>
-<p>The following is an example of a (real) legal form described using the Legal Form vocabulary (in JSON-LD):</p>
-<pre><code>{
-  &quot;@type&quot;: &quot;https://w3id.org/legal_form#LegalForm&quot;,
-  &quot;@id&quot;: &quot;indivbiz&quot;,
-  &quot;name&quot;: {
-    &quot;de&quot;: &quot;Einzelunternehmen&quot;,
-    &quot;en-US&quot;: &quot;Sole Proprietorship&quot;,
-    &quot;en-GB&quot;: &quot;Sole Trader&quot;
-  },
-  &quot;legislation&quot;: &quot;http://sws.geonames.org/2921044/&quot;,
-  &quot;limitedLiability&quot;: false
-}</code></pre>
+<p>The following is an example of a legal form defin in Germany which is described using the Legal Form vocabulary (in JSON-LD):</p>
+<pre><code>&lt;http://legalforms.org/indivbiz&gt; a &lt;https://w3id.org/legal_form#LegalForm&gt; ;
+lfov:name &quot;Einzelunternehmen&quot;@de,
+          &quot;Sole Trader&quot;@en-GB,
+          &quot;Sole Proprietorship&quot;@en-US ;
+&lt;legislation&gt; &quot;http://sws.geonames.org/2921044/&quot; ;
+&lt;limitedLiability&gt; false .</code></pre>
+<p>Use of an instance of a legal form</p>
+<pre><code>&lt;http://business.data.gov.uk/id/company/04285910&gt;
+  a rov:RegisteredOrganization ;
+  rov:legalName &quot;Apple Binding Ltd&quot; ;
+  rov:orgStatus &lt;http://example.com/ref/status/NormalActivity&gt; ;
+  rov:orgType &lt;http://legalforms.org/indivbiz&gt; ;</code></pre>
 </section>
 <section id="relationship-with-the-registered-organization-vocabulary" class="level1">
 <h1><a href="#relationship-with-the-registered-organization-vocabulary"><span class="header-section-number">6</span> Relationship with the Registered Organization Vocabulary</a></h1>

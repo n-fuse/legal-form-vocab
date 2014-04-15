@@ -1,0 +1,10 @@
+{
+  "@context" : {
+    "lfov": "https://w3id.org/legal_form#",
+    "acronym": "lfov:acronym",
+    "name": { "@id": "lfov:name", "@container": "@language" },
+    "legislation": { "@id" : "lfov:legislation", "@type" : "@id" },
+    "limitedLiability": "lfov:limitedLiability",
+    "shared": "lfov:shared"
+  }
+}
